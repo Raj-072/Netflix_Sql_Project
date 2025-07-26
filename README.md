@@ -44,13 +44,14 @@ FROM netflix;
 
 SELECT DISTINCT type
 FROM netflix;
+'''
+### 1. Count the number of Movies vs TV Shows
 
--- 1. Count the number of Movies vs TV Shows
-
+'''sql
 SELECT type,COUNT(*)
 FROM netflix
 GROUP BY type;
-
+'''
 -- 2. Find the most common rating for movies and TV shows
 
 WITH RatingCounts AS (
