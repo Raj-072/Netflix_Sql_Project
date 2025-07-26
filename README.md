@@ -44,7 +44,7 @@ FROM netflix;
 
 SELECT DISTINCT type
 FROM netflix;
-'''
+
 ### 1. Count the number of Movies vs TV Shows
 
 '''sql
