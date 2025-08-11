@@ -153,10 +153,8 @@ SELECT
 	COUNT(show_id) as total_release,
 	ROUND(
 		COUNT(show_id)::numeric/
-		(SELECT COUNT(show_id) FROM netflix WHERE country = 'India')::numeric * 100 
-		,2
-		)
-		as avg_release
+		(SELECT COUNT(show_id) FROM netflix WHERE country = 'India')::numeric * 100 ,2
+		)as avg_release
 FROM netflix
 WHERE country = 'India' 
 GROUP BY country, 2
